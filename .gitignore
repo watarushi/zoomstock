@@ -30,7 +30,7 @@ firestore.rules
 
 firestore.indexes.json
 
-databases.rules.json
+database.rules.json
 
 firebase.json
 .node_vers
