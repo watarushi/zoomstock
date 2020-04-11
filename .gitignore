@@ -18,7 +18,7 @@ firebase-debug.log
 .firebase
 
 #plugins
-./src/plugins
+./src/plugins/*
 
 #config
 config
