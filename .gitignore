@@ -1,6 +1,8 @@
 # dependencies
 .gitignore
+
 .firebaserc
+
 .node-version
 
 node_modules
@@ -10,6 +12,7 @@ public
 
 # logs
 npm-debug.log
+
 firebase-debug.log
 
 # Firebase cache
@@ -25,7 +28,10 @@ config
 
 
 firestore.rules
+
 firestore.indexes.json
-databases.rules
+
+databases.rules.json
+
 firebase.json
 .node_vers
