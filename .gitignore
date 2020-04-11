@@ -18,12 +18,12 @@ firebase-debug.log
 .firebase
 
 #plugins
-./src/plugins/*
+plugins
 
 #config
 config
 
-./src/nuxt.config.js
+nuxt.config.js
 
 
 firestore.rules
