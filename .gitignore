@@ -10,3 +10,11 @@ firebase-debug.log
 
 # Firebase cache
 .firebase
+
+#plugins
+plugins
+
+#config
+config
+
+nuxt.config.js

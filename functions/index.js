@@ -20,5 +20,14 @@ function handleRequest(req, res) {
     });
 }
 
+// var admin = require("firebase-admin");
+
+// var serviceAccount = require("../config/serviceAccountKey.json");
+
+// admin.initializeApp({
+//   credential: admin.credential.cert(serviceAccount),
+//   databaseURL: "https://zoomstock-a9856.firebaseio.com"
+// });
+
 app.use(handleRequest);
 exports.ssrapp = functions.https.onRequest(app);

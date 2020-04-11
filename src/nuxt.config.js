@@ -44,8 +44,21 @@ module.exports = {
   modules: [
     '@nuxtjs/pwa'
   ],
+  plugins: [
+    { src: "~/plugins/firebase.js"},
+  ],
   manifest: {
     name: 'Nuxt.js Firebase PWA',
     lang: 'ja'
+  },
+  env: {
+    apiKey: "AIzaSyBQWNYXb3e7lfQa2hurdHaKNvOZb0my4_I",
+    authDomain: "zoomstock-a9856.firebaseapp.com",
+    databaseURL: "https://zoomstock-a9856.firebaseio.com",
+    projectId: "zoomstock-a9856",
+    storageBucket: "zoomstock-a9856.appspot.com",
+    messagingSenderId: "748691684529",
+    appId: "1:748691684529:web:46fd116827325963a3f690",
+    measurementId: "G-B6L8WGVVY4"
   }
 }

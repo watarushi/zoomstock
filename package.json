@@ -11,5 +11,9 @@
     "copystatic": "cp -R src/static/* public",
     "serve": "firebase serve --only hosting,functions",
     "deploy": "firebase deploy"
+  },
+  "dependencies": {
+    "firebase-admin": "^8.10.0",
+    "firebase-tools": "^6.8.0"
   }
 }
