@@ -1,16 +1,12 @@
 <template>
     <div class="searchimage">
         <p>幅広いコレクションの中から、最適な背景がきっと見つかります。<br>あなたのリモートミーティングを素敵な背景で彩りましょう。</p>
-        <div id="images">
-            <div v-for="image in images">
-                <img :src="image.image_URL" />
+           <div class="imageview">
+                <ui v-for="image in images" v-bind:key="image.id">
+                    <li><img :src="image.image_URL" /><li>
+                    <li>{{image.id}}<li>
+                </ui>
             </div>
-        </div>
-        <!-- <img :src="image_src"> -->
-        <ul v-for="item of items" v-bind:key="item.name">
-            <!-- <li>{{ "item.name" }}</li> -->
-            <li><img :src="item.name"></li>
-        </ul>
     </div>
     
 </template>
@@ -26,31 +22,11 @@ export default {
     data () {
         return {
             images: [],
-            // image_src: require("../../assets/wallpaper.jpg"),// ←
-            items: [
-                { name: require("../assets/logo.png") },
-                { name: require("../assets/logo.png") },
-                { name: require("../assets/logo.png") },
-                { name: require("../assets/logo.png") },
-                { name: require("../assets/logo.png") },
-                { name: require("../assets/logo.png") },
-                { name: require("../assets/logo.png") },
-                { name: require("../assets/logo.png") },
-                { name: require("../assets/logo.png") },
-                { name: require("../assets/logo.png") },
-                { name: require("../assets/logo.png") },
-                { name: require("../assets/logo.png") },
-                { name: require("../assets/logo.png") },
-                { name: require("../assets/logo.png") },
-                { name: require("../assets/logo.png") },
-                { name: require("../assets/logo.png") }
-             ]
+       
         }
     },
     mounted (){
         if (process.client) {
-            console.log('a')
-            console.log('b')
             // const db = require('../plugins/firebase.js')
             console.log(db)
             db.collection('products').get().then(snap => {
@@ -76,13 +52,29 @@ export default {
         left: 40%;
         margin-top: 100px;
     }
-    .searchimage ul{
-        display:inline-block;
-        margin:10px 10px;/*←上下5px、左右2pxのマージン指定の場合*/
-
-    }
     .searchimage img{
         width:1000;
         height:130;
+    }
+
+        /* スマホ　767px以下 */
+    @media only screen and (max-width: 767px){
+    .imageview img{
+        width: 100px;
+        height: 100px;
+    }
+    }
+    /* pc　768px以上 */
+    @media only screen and (min-width: 768px), print {
+    .imageview img{
+        width: 100px;
+        height: 100px;
+    }
+    }
+    .imageview li{
+        list-style: none;
+        /* display:inline-block; */
+        margin:10px 10px;/*←上下5px、左右2pxのマージン指定の場合*/
+
     }
 </style>
