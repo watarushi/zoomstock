@@ -1,6 +1,6 @@
 <template>
     <div class="searchimage">
-        <p>幅広いコレクションの中から、最適な背景がきっと見つかります。<br>あなたのリモートミーティングを素敵な背景で彩りましょう。</p>
+        <p>幅広いコレクションの中から、最適な背景がきっと見つかります。<br>あなたのリモートミーティングを素敵な背景で彩りましょう。と言ってますけども</p>
            <div class="imageview">
                 <ui v-for="image in images" v-bind:key="image.id">
                     <li><img :src="image.image_URL" /><li>
